@@ -1,0 +1,12 @@
+body{
+    display: flex;
+}
+
+.left {
+    width: 25%;
+}
+
+.right {
+    width: 75%;
+    background-color: aqua;
+}
