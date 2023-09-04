@@ -2,7 +2,7 @@
 @vite('resources/js/faktury.js')
 
 @section('content')
-<table class="pracownicy">
+<table class="table">
     <tr>
         <th>Lp.</th>
         <th>Opis</th>

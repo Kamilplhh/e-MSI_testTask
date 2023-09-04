@@ -14,6 +14,13 @@ $('input[type=color]').on("change", function(){
 function changeColor() {
     let first = $('input[name=first]').val();
     let second = $('input[name=second]').val();
+    if(first === '#000000'){
+        first = "#a1a1a1";
+        second = "#777575";
+
+        $('input[name=first]').val(first);
+        $('input[name=second]').val(second);
+    }
     
     $('tr').css("background-color", first);
     $('tr:nth-child(even)').css("background-color", second);

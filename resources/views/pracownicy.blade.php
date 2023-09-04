@@ -2,7 +2,7 @@
 @vite('resources/js/pracownicy.js')
 
 @section('content')
-<table class="pracownicy">
+<table class="table">
     <tr>
         <th>Lp.</th>
         <th>Imię</th>
@@ -54,7 +54,7 @@
 </table><br>
 
 <label for="first">First</label>
-<input type="color" name="first" value="#a1a1a1">
+<input type="color" name="first">
 <label for="second">Second</label>
-<input type="color" name="second" value="#777575">
+<input type="color" name="second">
 @stop

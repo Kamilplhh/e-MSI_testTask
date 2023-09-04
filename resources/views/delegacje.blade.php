@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-<table class="pracownicy">
+<table class="table">
     <tr>
         <th>Lp.</th>
         <th>Imie i Nazwisko</th>
