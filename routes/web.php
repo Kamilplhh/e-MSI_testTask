@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/pracownicy', function () {
     return view('pracownicy');
 });
+
+Route::get('/faktury', function () {
+    return view('faktury');
+});
