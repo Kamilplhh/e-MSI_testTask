@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DelegationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,5 @@ Route::get('/pracownicy', function () {
 Route::get('/faktury', function () {
     return view('faktury');
 });
+
+Route::get('/delegacje', [DelegationController::class, 'showData']); 
