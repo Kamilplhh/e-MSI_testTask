@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <title>Zadanie zdalne e-MSI</title>
 
-    @vite('resources/js/app.js')
     @vite('resources/css/app.css')
 </head>
 

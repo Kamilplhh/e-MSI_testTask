@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('nip');
             $table->string('regon');
-            $table->boolean('płatnik')->default(false);
+            $table->string('nazwa');
+            $table->boolean('platnik')->default(false);
             $table->string('ulica');
             $table->string('nrDomu');
             $table->string('nrMieszkania');

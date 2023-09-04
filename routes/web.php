@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContractorController;
 use App\Http\Controllers\DelegationController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,3 +28,5 @@ Route::get('/faktury', function () {
 });
 
 Route::get('/delegacje', [DelegationController::class, 'showData']); 
+
+Route::get('/kontrahenci', [ContractorController::class, 'showData']); 
