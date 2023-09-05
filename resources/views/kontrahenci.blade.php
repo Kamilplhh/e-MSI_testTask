@@ -16,35 +16,39 @@
     </tr>
     @foreach($contractors as $contractor)
     <tr>
-        <td>
-            <input type="text" name="nip" placeholder="{{ $contractor->nip }}">
-        </td>
-        <td>
-            <input type="text" name="regon" placeholder="{{ $contractor->regon }}">
-        </td>
-        <td>
-            <input type="text" name="nazwa" placeholder="{{ $contractor->nazwa }}">
-        </td>
-        <td>
-            @if($contractor->platnik == 1)
-            <input type="checkbox" name="platnik" checked>
-            @else
-            <input type="checkbox" name="platnik"">
+        <form method="POST" action="/update">
+        @csrf
+            <input type="hidden" name="id" value="{{ $contractor->id }}">
+            <td>
+                <input type="text" name="nip" value="{{ $contractor->nip }}" required>
+            </td>
+            <td>
+                <input type="text" name="regon" value="{{ $contractor->regon }}" required>
+            </td>
+            <td>
+                <input type="text" name="nazwa" value="{{ $contractor->nazwa }}" required>
+            </td>
+            <td>
+                @if($contractor->platnik == 1)
+                <input type="checkbox" name="platnik" checked>
+                @else
+                <input type="checkbox" name="platnik"">
             @endif  
         </td>
         <td>
-            <input type=" text" name="ulica" placeholder="{{ $contractor->ulica }}">
-        </td>
-        <td>
-            <input type="text" name="nrDomu" placeholder="{{ $contractor->nrDomu }}">
-        </td>
-        <td>
-            <input type="text" name="nrMieszkania" placeholder="{{ $contractor->nrMieszkania }}">
-        </td>
-        <td>
+            <input type=" text" name="ulica" value="{{ $contractor->ulica }}" required>
+            </td>
+            <td>
+                <input type="text" name="nrDomu" value="{{ $contractor->nrDomu }}" required>
+            </td>
+            <td>
+                <input type="text" name="nrMieszkania" value="{{ $contractor->nrMieszkania }}" required>
+            </td>
+            <td>
+                <button class="update" type="submit">Update</button>
+        </form>
             <a href="/delete/{{ $contractor->id }}"><button class="delete">Delete</button></a><br>
-            <button class="update" id="{{ $contractor->id }}">Update</button>
-        </td>
+            </td>
     </tr>
     @endforeach
     <tr>

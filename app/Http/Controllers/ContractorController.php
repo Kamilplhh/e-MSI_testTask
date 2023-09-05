@@ -33,4 +33,27 @@ class ContractorController extends Controller
         $this->contractorRepository->deleteContractor($id);
         return redirect()->back();
     }
+
+    public function updateContractor(Request $request)
+    {
+        $request->validate([
+            'nip' => ['required', 'string', 'max:255'],
+            'regon' => ['required', 'string', 'max:255'],
+            'nazwa' => ['required', 'string', 'max:255'],
+            'ulica' => ['required', 'string', 'max:255'],
+            'nrDomu' => ['required', 'string', 'max:255'],
+            'nrMieszkania' => ['required', 'string', 'max:255'],
+        ]);
+        $fileArray = $request->except(['_token']);
+        $id = intval($fileArray['id']);
+
+        if (isset($fileArray['platnik'])) {
+            $fileArray['platnik'] = 1;
+        } else {
+            $fileArray['platnik'] = 0;
+        }
+
+        $this->contractorRepository->updateContractor($id, $fileArray);
+        return redirect()->back();
+    }
 }

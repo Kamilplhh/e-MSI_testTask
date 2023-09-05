@@ -33,4 +33,6 @@ Route::get('/kontrahenci', [ContractorController::class, 'showData']);
 
 Route::post('/send', [ContractorController::class, 'uploadContractor'])->name('uploadContractor'); 
 
+Route::post('/update', [ContractorController::class, 'updateContractor'])->name('updateContractor'); 
+
 Route::get('/delete/{id}', [ContractorController::class, 'removeContractor'])->name('removeContractor');
