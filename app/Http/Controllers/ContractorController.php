@@ -27,4 +27,10 @@ class ContractorController extends Controller
 
         $this->contractorRepository->createContractor($fileArray);
     }
+
+    public function removeContractor($id)
+    {
+        $this->contractorRepository->deleteContractor($id);
+        return redirect()->back();
+    }
 }

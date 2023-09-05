@@ -39,11 +39,11 @@
             <input type="text" name="nrDomu" placeholder="{{ $contractor->nrDomu }}">
         </td>
         <td>
-            <input type="text" name="nrMieszkania" placeholder="{{$contractor->nrMieszkania }}">
+            <input type="text" name="nrMieszkania" placeholder="{{ $contractor->nrMieszkania }}">
         </td>
         <td>
-            <button class="delete" id="{{$contractor->id }}">Delete</button><br>
-            <button class="update" id="{{$contractor->id }}">Update</button>
+            <a href="/delete/{{ $contractor->id }}"><button class="delete">Delete</button></a><br>
+            <button class="update" id="{{ $contractor->id }}">Update</button>
         </td>
     </tr>
     @endforeach

@@ -65,7 +65,7 @@ $(document).on("click", '.submit', function() {
                 nrDomu: nrDomu,
                 nrMieszkania: nrMieszkania
             },
-            success: function (Response) {
+            success: function () {
                 $(location).prop('href', '/kontrahenci');
             },
             error: function () {
