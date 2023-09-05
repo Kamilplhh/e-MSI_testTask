@@ -1,5 +1,6 @@
 @extends('layouts.master')
 @vite('resources/js/kontrahenci.js')
+<input id="signup-token" name="_token" type="hidden" value="{{csrf_token()}}">
 
 @section('content')
 <table class="table">

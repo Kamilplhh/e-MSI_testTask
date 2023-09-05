@@ -17,13 +17,13 @@ class ContractorRepository implements ContractorRepositoryInterface
         contractor::destroy($contractorId);
     }
 
-    public function createContractor(array $data) 
+    public function createContractor(array $file) 
     {
-        return contractor::create($data);
+        return contractor::create($file);
     }
 
-    public function updateContractor($contractorId, array $data) 
+    public function updateContractor($contractorId, array $file) 
     {
-        return contractor::whereId($contractorId)->update($data);
+        return contractor::whereId($contractorId)->update($file);
     }
 }

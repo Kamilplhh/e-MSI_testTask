@@ -19,4 +19,12 @@ class ContractorController extends Controller
         $contractors = $this->contractorRepository->getAllContractors();
         return view('kontrahenci', compact('contractors'));
     }
+
+    public function uploadContractor(Request $request)
+    {
+        $fileArray = $request->post();
+        $fileArray['platnik'] = intval($fileArray['platnik']);
+
+        $this->contractorRepository->createContractor($fileArray);
+    }
 }

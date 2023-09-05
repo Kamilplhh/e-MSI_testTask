@@ -30,3 +30,5 @@ Route::get('/faktury', function () {
 Route::get('/delegacje', [DelegationController::class, 'showData']); 
 
 Route::get('/kontrahenci', [ContractorController::class, 'showData']); 
+
+Route::post('/send', [ContractorController::class, 'uploadContractor'])->name('uploadContractor'); 
